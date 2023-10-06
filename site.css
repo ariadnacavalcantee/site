@@ -1,7 +1,9 @@
 * {
     box-sizing: border-box;
 }
-
+html {
+    width: 100%;
+}
 body {
     margin:0;
     padding:0;
@@ -35,7 +37,7 @@ button:hover {
 .container {
     display:flex;
     height: 1200px;
-    width:80vw;
+    width:100%;
 }
 .dropdown {
     position: relative;
@@ -69,7 +71,8 @@ button:hover {
     flex-direction: column;
 }
 .content {
-    width:1200px;
+    height:1200px;
+    width: 80vw;
     background-color: yellowgreen;
     display:flex;
     flex-wrap: wrap;
@@ -113,3 +116,17 @@ article {
         transform: rotate(360deg);
     }
     } 
+    @media screen and (max-width:600px) {
+        .sidebarleft {
+            width: 100vw;
+            height: min-content;
+        }
+        .container {
+            height: min-content;
+            flex-direction: column;
+        }
+        .content {
+            width: 100vw;
+            height: min-content;
+        }
+    }
